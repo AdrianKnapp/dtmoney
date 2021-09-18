@@ -28,18 +28,21 @@ export function NewTransactionModal({ isOpen, onRequestClose}: NewTransactionMod
   async function handleCreateNewTransaction(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    await createTransaction({
-      title,
-      amount,
-      category,
-      type,
-    })
+    if(title.length && amount && category.length) {
+      await createTransaction({
+        title,
+        amount,
+        category,
+        type,
+      })
 
-    setTitle('');
-    setAmount(0);
-    setCategory('');
-    setType('deposit');
-    onRequestClose();
+      setTitle('');
+      setAmount(0);
+      setCategory('');
+      setType('deposit');
+
+      onRequestClose();
+    }
   }
 
   return (
