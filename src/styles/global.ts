@@ -75,6 +75,17 @@ export const GlobalStyle = createGlobalStyle`
     position: relative;
     border-radius: 0.25rem;
     outline: 0;
+
+    animation: modal-open .3s forwards;
+  }
+
+  @keyframes modal-open {
+    from {
+      transform: translateY(-50px)
+    }
+    to {
+      transform: translateY(0)
+    }
   }
 
   .react-modal-close {

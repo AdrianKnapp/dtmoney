@@ -21,10 +21,15 @@ export const Content = styled.div`
     padding: 0 2rem;
     border-radius: 0.25rem;
     height: 3rem;
-    
+    outline: 0;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
     transition: filter .2s;
 
     &:hover {
+      filter: brightness(0.9);
+    }
+
+    &:focus {
       filter: brightness(0.9);
     }
   }
