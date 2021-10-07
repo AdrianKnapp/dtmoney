@@ -16,4 +16,4 @@ Use ```git clone``` to install the project.
 
 ## Usage
 
-Use ```yarn dev``` to initialize your localhost server.
+Use ```yarn start``` to initialize your localhost server.
